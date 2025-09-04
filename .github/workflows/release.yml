@@ -1,0 +1,9 @@
+name: trigger
+on:
+  release:
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pwn"
