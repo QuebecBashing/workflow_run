@@ -1,0 +1,10 @@
+name: trigger
+on:
+  merge_group:
+
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pwn"
