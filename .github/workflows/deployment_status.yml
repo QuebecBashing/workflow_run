@@ -1,0 +1,9 @@
+name: trigger
+on:
+  deployment_status:
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pwn"
