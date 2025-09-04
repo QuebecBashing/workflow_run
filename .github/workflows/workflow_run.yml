@@ -1,17 +1,9 @@
-name: Workflow Run
+name: trigger
 on:
-  workflow_run:
-    workflows:
-      - "trigger"
-    types:
-      - completed
-
-permissions: {}
+  workflow_call:
 
 jobs:
-  debug:
+  a:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug
-        uses: raven-actions/debug@v1
-      - run: echo ${{ secrets.FLAG }}
+      - run: echo "pwn"
