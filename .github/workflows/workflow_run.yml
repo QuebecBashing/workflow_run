@@ -1,0 +1,16 @@
+name: Workflow Run
+on:
+  workflow_run:
+    workflows:
+      - "trigger"
+    types:
+      - completed
+
+permissions: {}
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug
+        uses: raven-actions/debug@v1
