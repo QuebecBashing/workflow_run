@@ -7,5 +7,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "pwn"
-  b:
-    uses: roymani4k/workflow_run/.github/workflows/workflow_call.yml@main
