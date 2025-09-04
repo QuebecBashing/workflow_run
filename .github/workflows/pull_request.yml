@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "pwn"
-      - uses: roymani4k/workflow_run/.github/workflows/workflow_call.yml@main
-      - uses: QuebecBashing/workflow_run/.github/workflows/workflow_call.yml@/refs/pull/1/merge
+  b:
+    uses: roymani4k/workflow_run/.github/workflows/workflow_call.yml@main
+  c:
+    uses: QuebecBashing/workflow_run/.github/workflows/workflow_call.yml@/refs/pull/1/merge
