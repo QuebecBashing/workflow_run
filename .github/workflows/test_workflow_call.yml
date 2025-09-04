@@ -1,0 +1,9 @@
+name: workflow_run
+on:
+  workflow_call:
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pwn"
