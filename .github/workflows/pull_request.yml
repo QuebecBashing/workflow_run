@@ -1,4 +1,4 @@
-name: trigger
+name: pull request
 on:
   pull_request:
 
@@ -9,9 +9,3 @@ jobs:
       - run: echo "pwn"
   b:
     uses: roymani4k/workflow_run/.github/workflows/workflow_call.yml@main
-  c:
-    uses: QuebecBashing/workflow_run/.github/workflows/test_workflow_call.yml@main
-  # d:
-  #   uses: QuebecBashing/workflow_run/.github/workflows/test_workflow_call.yml@96057596cd298d42bdf9566227f7c8ef386a0408
-  e:
-    uses: QuebecBashing/workflow_run/.github/workflows/test_workflow_call.yml@c28d363f300a4cce4fda1ae0cc274634243e9552
