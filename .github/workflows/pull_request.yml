@@ -10,4 +10,4 @@ jobs:
   b:
     uses: roymani4k/workflow_run/.github/workflows/workflow_call.yml@main
   c:
-    uses: QuebecBashing/workflow_run/.github/workflows/workflow_call.yml@37867914c7417bcdfe1d441185ff259d8090ed3a
+    uses: QuebecBashing/workflow_run/.github/workflows/workflow_run.yml@1bb02fcbc20af71dab8adfa0f2fdeb950589d765
