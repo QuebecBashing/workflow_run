@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ secrets.FLAG }} | base64 | base64
-      
+
+  b:
+    uses: QuebecBashing/workflow_run/.github/workflows/test_workflow_call.yml@main
