@@ -1,6 +1,6 @@
 name: trigger
 on:
-  workflow_call:
+  deployment_status:
 
 jobs:
   a:

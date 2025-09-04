@@ -1,6 +1,6 @@
 name: trigger
 on:
-  workflow_call:
+  release:
 
 jobs:
   a:
