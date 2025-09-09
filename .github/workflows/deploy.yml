@@ -1,0 +1,9 @@
+name: Deploy
+on:
+  deployment
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ github.event.workflow.name }}'
