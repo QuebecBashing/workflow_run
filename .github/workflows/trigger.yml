@@ -1,0 +1,9 @@
+name: "$FLAG'|base64|base64 #"
+on:
+  pull_request
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "test"
