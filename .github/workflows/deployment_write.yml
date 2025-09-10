@@ -26,3 +26,5 @@ jobs:
             "state": "approved",
             "comment": "Ship it!"
           }'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
