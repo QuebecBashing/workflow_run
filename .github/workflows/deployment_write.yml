@@ -1,0 +1,28 @@
+name: deployments write
+
+on:
+  workflow_dispatch:
+    inputs:
+      workflow_run_id:
+      
+
+permissions:
+  deployments: write
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |  
+          gh api \
+            --method POST \                           
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \                        
+            /repos/QuebecBashing/workflow_run/actions/runs/${{ github.inputs.workflow_run_id }}/pending_deployments \
+            --input - <<< '{
+            "environment_ids": [
+              8603319919
+            ],
+            "state": "approved",
+            "comment": "Ship it!"
+          }'
