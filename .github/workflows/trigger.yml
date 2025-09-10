@@ -8,3 +8,22 @@ jobs:
     environment: internal
     steps:
       - run: echo "test"
+      - name: Create deployment
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{owner}/{repo}/deployments
+          mediaType: |
+            previews:
+            - ant-man
+            - flash
+          payload: '{ "deploy": "migrate" }'
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          task: deploy:preview
+          auto_merge: false
+          required_contexts: "[]"
+          environment: preview-pr-${{ github.event.number }}
+          description: "Preview for Pull Request #${{ github.event.number }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
