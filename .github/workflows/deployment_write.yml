@@ -15,9 +15,9 @@ jobs:
     steps:
       - run: |  
           gh api \
-            --method POST \                           
+            --method POST \
             -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \                        
+            -H "X-GitHub-Api-Version: 2022-11-28" \
             /repos/QuebecBashing/workflow_run/actions/runs/${{ github.event.inputs.workflow_run_id }}/pending_deployments \
             --input - <<< '{
             "environment_ids": [
