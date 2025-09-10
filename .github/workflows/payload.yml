@@ -1,0 +1,10 @@
+name: deployment
+
+on:
+  deployment_status:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.deployment.payload.web_url }}"
